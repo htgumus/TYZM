@@ -1,0 +1,55 @@
+
+public class ErrorProneJavaCode {
+    public static void main(String[] args) {
+        // Unused variable
+        int unusedVariable = 10;
+
+        // Null pointer exception
+        String nullString = null;
+        System.out.println(nullString.length());
+
+        // Infinite loop
+        while (true) {
+            System.out.println("Infinite loop");
+        }
+
+        // Unhandled exception
+        try {
+            throw new RuntimeException("Unhandled exception");
+        } catch (Exception e) {
+            // Empty catch block
+        }
+
+        // Dead code
+        if (false) {
+            System.out.println("Dead code");
+        }
+
+        // Unused method
+        unusedMethod();
+
+        // Cyclomatic complexity
+        int x = 10;
+        if (x > 5) {
+            if (x < 15) {
+                if (x == 10) {
+                    System.out.println("Cyclomatic complexity");
+                }
+            }
+        }
+
+        // Long method
+        longMethod();
+    }
+
+    private static void unusedMethod() {
+        // Unused method
+    }
+
+    private static void longMethod() {
+        // Long method
+        for (int i = 0; i < 100; i++) {
+            System.out.println("Long method");
+        }
+    }
+}
